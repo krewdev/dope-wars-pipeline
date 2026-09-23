@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>DOPE WARS: THE PIPELINE</title>
+<style>
+:root{--g:#7CFF6B;--a:#FFBF5E;--r:#FF4D4D;--bg:#050805;--ink:#0c140c}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--g);font:15px/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+body{padding:10px 10px calc(12px + env(safe-area-inset-bottom));max-width:520px;margin:0 auto}
+h1{font-size:13px;letter-spacing:.12em;margin:0 0 8px}
+#hud{border:1px solid #1d3a1d;background:var(--ink);padding:8px;margin-bottom:8px}
+#hud.drown{border-color:var(--r);color:var(--r)}
+.row{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.amber{color:var(--a)}.red{color:var(--r)}
+#hint{font-size:12px;color:var(--a);margin:0 0 8px}
+#log{height:38vh;overflow:auto;border:1px solid #1d3a1d;background:#030603;padding:8px;white-space:pre-wrap;word-break:break-word}
+#pad{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+button{min-height:44px;padding:8px 10px;background:#102010;color:var(--g);border:1px solid #2a4a2a;font:inherit;flex:1 1 30%}
+button.pay{border-color:var(--r);color:var(--r)}
+#cmd{width:100%;min-height:44px;font-size:16px;background:#000;color:var(--g);border:1px solid #2a4a2a;padding:8px}
+</style>
+</head>
+<body>
+<h1>DOPE WARS: THE PIPELINE</h1>
+<div id="hud"></div>
+<div id="hint">BROOKLYN: FARM GREEN 2 → JET QUEENS → BUY CATALYST 2 → COOK GREEN CATALYST → PAY HARRY</div>
+<div id="log"></div>
+<div id="pad"></div>
+<input id="cmd" autocomplete="off" autocapitalize="characters" placeholder="FARM GREEN 2"/>
+<script src="game.js"></script>
+</body>
+</html>

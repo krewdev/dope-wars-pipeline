@@ -34,15 +34,23 @@ Markets: LOT SEVEN (KINGS), LAB ROW (ROW), TWO-KIT ALLEY (unheld), BILLBOARD PIT
 
 ## GPS
 - SHARE FIX opt-in. Deny = RADIO.
-- watchPosition → cellKey only. Never store raw lat/lon.
-- CellKey change = walk into a new cell, free snap, 0 day.
-- Richmond-class fix maps to RADIO MAST / GREENPOINT RADIO.
+- watchPosition / getCurrentPosition → hashed cell only. Never store raw lat/lon.
+- Same cell always maps to the same shadow beacon.
+- Cell change = walk into a new cell, free snap, 0 day.
+- Outside the six books, FIX maps to RADIO MAST / GREENPOINT RADIO.
 - Map shows crew flags + a count. No player pins.
 
 ## Economy
 NPC vendors 1.4×. Your-crew stall 0.85×. Enemy stall refused 2.2×.
 Holder cut on SELL/BURN: 8%.
 Spin: 5 min if FIX live; 1 act in RADIO; 3rd same shoe same day = dust.
-Drip ticks: RURAL 8 / STRIP 22 / METRO 55 / LANDMARK 90
+Drip ticks (this build): RURAL 8 / STRIP 22 / METRO 55 / LANDMARK 90
+payout *= (1 + 0.08 * teammates_present), cap 5
 Buy-off = 3× last drip tick.
 Wipe = 1 certified slot OR 1 SHOT. Node UNHELD until tomorrow.
+
+## Chat
+AREA / CREW / COLLAB. Strip coords and "meet me at". Nicknames only.
+
+## On-chain later
+Beacon, Faction, Claim, Heartbeat (15 min TTL, coarse geohash), RaidTicket.
